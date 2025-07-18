@@ -1,0 +1,177 @@
+<footer>
+    <style>
+        footer {
+            background: linear-gradient(to top, var(--dark-bg), #000);
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.1;
+        }
+        
+        footer h3 {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        footer h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--gold);
+        }
+        
+        footer p {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--gold);
+            color: #000;
+            transform: translateY(-3px);
+        }
+        
+        footer ul li {
+            margin-bottom: 15px;
+        }
+        
+        footer ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        footer ul li a::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--gold);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        footer ul li a:hover {
+            color: var(--gold);
+            padding-left: 25px;
+        }
+        
+        footer ul li a:hover::before {
+            opacity: 1;
+        }
+        
+        .input-group {
+            margin-bottom: 15px;
+        }
+        
+        .input-group .form-control {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            color: var(--text-light);
+            border-radius: 0;
+        }
+        
+        .input-group .btn {
+            border-radius: 0;
+            background: var(--gold);
+            color: #000;
+            font-weight: 600;
+            border: 1px solid var(--gold);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            margin-top: 60px;
+            padding-top: 30px;
+        }
+        
+        .footer-bottom p {
+            margin-bottom: 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom .text-danger {
+            color: var(--gold) !important;
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h3 class="mb-4">Epicurean Delights</h3>
+                <p>Where culinary artistry meets unparalleled luxury. Our commitment to excellence has made us a destination for those who seek the extraordinary.</p>
+                <div class="mt-4">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h3 class="mb-4">Quick Links</h3>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#home" class="text-white">Home</a></li>
+                    <li class="mb-2"><a href="#about" class="text-white">Our Story</a></li>
+                    <li class="mb-2"><a href="#menu" class="text-white">Menu & Wine List</a></li>
+                    <li class="mb-2"><a href="#gallery" class="text-white">Gallery</a></li>
+                    <li class="mb-2"><a href="#contact" class="text-white">Contact & Location</a></li>
+                    <li class="mb-2"><a href="#" class="text-white">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-4">
+                <h3 class="mb-4">Exclusive Updates</h3>
+                <p>Subscribe to our newsletter for seasonal menus, special events, and exclusive offers.</p>
+                <form>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email" aria-label="Email" required>
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="privacyCheck" required>
+                        <label class="form-check-label small" for="privacyCheck">
+                            I agree to the privacy policy
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom text-center pt-4">
+            <p class="mb-0">&copy; 2023 Epicurean Delights. All Rights Reserved. | Crafted with <i class="fas fa-heart text-danger"></i> for culinary excellence</p>
+        </div>
+    </div>
+</footer>

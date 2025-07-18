@@ -1,0 +1,157 @@
+<section id="contact" class="bg-dark">
+    <style>
+        #contact {
+            background: linear-gradient(to bottom, var(--dark-bg), var(--medium-bg));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.1;
+        }
+        
+        .map-container {
+            position: relative;
+            height: 600px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(30%) contrast(120%);
+        }
+        
+        .bg-black {
+            background: rgba(18, 18, 18, 0.9) !important;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        #contact h3 {
+            color: var(--gold);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        #contact h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+        
+        #contact ul li {
+            margin-bottom: 25px;
+            padding-left: 40px;
+            position: relative;
+        }
+        
+        #contact ul li i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--gold);
+        }
+        
+        #contact strong {
+            display: block;
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+        
+        #contact span {
+            display: block;
+            color: var(--text-muted);
+        }
+        
+        #contact .btn-lg {
+            padding: 12px 30px;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+        
+        /* New class for contact info box */
+        .contact-info-box {
+            background: linear-gradient(145deg, #121212, #0d0d0d);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        @media (max-width: 991px) {
+            .map-container {
+                height: 400px;
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="section-title">
+            <h2>Find Us</h2>
+            <p>Visit Our Culinary Sanctuary</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6 mb-5 mb-lg-0 animate-on-scroll">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184133404672!2d-73.9875748243705!3d40.7580288713875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1690370920446!5m2!1sen!2sus" allowfullscreen="" aria-label="image"></iframe>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="https://goo.gl/maps/kMx5qyZJmFQ2Wp1H8" target="_blank" class="btn btn-primary btn-lg" rel="noopener noreferrer">
+                        <i class="fas fa-directions me-2"></i>Get Directions
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 animate-on-scroll">
+                <div class="p-5 rounded shadow-lg contact-info-box">
+                    <h3 class="mb-4">Contact Information</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-4">
+                            <i class="fas fa-map-marker-alt me-3 text-primary fa-lg"></i>
+                            <strong class="d-block mb-1">Address</strong>
+                            <span>1 Gourmet Plaza, Culinary District, New York, NY 10001</span>
+                        </li>
+                        <li class="mb-4">
+                            <i class="fas fa-phone me-3 text-primary fa-lg"></i>
+                            <strong class="d-block mb-1">Reservations</strong>
+                            <span>(212) 555-7890</span>
+                        </li>
+                        <li class="mb-4">
+                            <i class="fas fa-envelope me-3 text-primary fa-lg"></i>
+                            <strong class="d-block mb-1">Email</strong>
+                            <span>reservations@epicureandelights.com</span>
+                        </li>
+                        <li class="mb-4">
+                            <i class="fas fa-clock me-3 text-primary fa-lg"></i>
+                            <strong class="d-block mb-1">Hours</strong>
+                            <div>
+                                <span class="d-block">Monday - Thursday: 5:00 PM - 10:30 PM</span>
+                                <span class="d-block">Friday - Saturday: 5:00 PM - 11:30 PM</span>
+                                <span class="d-block">Sunday: 5:00 PM - 9:30 PM</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-star me-3 text-primary fa-lg"></i>
+                            <strong class="d-block mb-1">Special Events</strong>
+                            <span>Private dining & events available upon request</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
